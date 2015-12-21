@@ -1,0 +1,78 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:screenOrientation="portrait"
+    tools:context="com.example.kgreen.wallpaper.WallpaperScreen"
+    android:background="#ecc8dded">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Press an image to make it your background"
+        android:id="@+id/textView2"
+        android:textColor="#fefafa"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:background="#0d0c0c"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_alignParentEnd="false" />
+
+
+    <Button
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:id="@+id/share"
+        android:background="@drawable/share"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:id="@+id/github"
+        android:background="@drawable/github"
+        android:padding="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/activity_main_swipe_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView2"
+        android:layout_toRightOf="@+id/github"
+        android:layout_toLeftOf="@+id/share"
+        android:layout_toStartOf="@+id/share">
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView"
+        android:clickable="false"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <TextView
+        android:layout_width="165dp"
+        android:layout_height="165dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/downloadedPic"
+        android:background="@drawable/wallpaper"
+        android:textColor="#ffffff"
+        android:textAlignment="center"
+        android:visibility="invisible"
+        android:layout_marginTop="59dp"
+        android:layout_alignTop="@+id/activity_main_swipe_refresh_layout"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
